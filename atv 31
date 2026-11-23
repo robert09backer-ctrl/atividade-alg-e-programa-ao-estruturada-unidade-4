@@ -1,0 +1,9 @@
+from collections import deque
+fila = deque()
+capacidade = 3
+for item in [1, 2, 3, 4]:
+ if len(fila) < capacidade:
+  fila.append(item)
+ else:
+  print("Fila cheia; recusado:", item)
+print(list(fila))

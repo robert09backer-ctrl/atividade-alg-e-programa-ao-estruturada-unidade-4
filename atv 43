@@ -1,0 +1,8 @@
+arvore = {"P1": ["P2", "P3"],
+ "P2": ["P4"], "P3": [], "P4": []}
+def altura(no):
+ filhos = arvore.get(no, [])
+ if not filhos:
+  return 0
+ return 1 + max(altura(f) for f in filhos)
+print("Altura:", altura("P1"))

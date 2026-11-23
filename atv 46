@@ -1,0 +1,11 @@
+arvore = {"P1": ["P2", "P3"],
+ "P2": ["P4"], "P3": [], "P4": []}
+def caminho(no, alvo):
+ if no == alvo:
+  return [no]
+ for filho in arvore.get(no, []):
+  resultado = caminho(filho, alvo)
+ if resultado is not None:
+  return [no] + resultado
+ return None
+print(caminho("P1", "P4"))

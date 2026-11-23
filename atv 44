@@ -1,0 +1,7 @@
+arvore = {"P1": ["P2", "P3"],
+ "P2": ["P4"], "P3": [], "P4": []}
+def existe(no, alvo):
+ if no == alvo:
+  return True
+ return any(existe(f, alvo) for f in arvore.get(no, []))
+print(existe("P1", "P4"))

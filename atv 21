@@ -1,0 +1,7 @@
+texto = "Olá"
+historico.append(texto)
+texto += " mundo"
+print("Editado:", texto)
+if historico:
+ texto = historico.pop()
+print("Desfeito:", texto)

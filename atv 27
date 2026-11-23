@@ -1,0 +1,3 @@
+from collections import deque
+fila = deque(["Pedido 1", "Pedido 2"])
+print("Próximo:", fila[0] if fila else "Vazia")

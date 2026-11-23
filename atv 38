@@ -1,0 +1,8 @@
+class No:
+ def __init__(self, nome):
+  self.nome = nome
+  self.filhos = []
+raiz = No("P100")
+raiz.filhos.append(No("P101"))
+raiz.filhos.append(No("P102"))
+print(raiz.nome, [f.nome for f in raiz.filhos])

@@ -1,0 +1,15 @@
+class Pilha:
+ def __init__(self):
+  self.itens = []
+ def push(self, item):
+  self.itens.append(item)
+ def pop(self):
+  return self.itens.pop() if self.itens else None
+ def topo(self):
+  return self.itens[-1] if self.itens else None
+ def vazia(self):
+  return not self.itens
+p = Pilha()
+p.push(10)
+p.push(20)
+print(p.topo(), p.pop(), p.vazia())

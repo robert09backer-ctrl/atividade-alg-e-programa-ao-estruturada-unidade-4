@@ -1,0 +1,6 @@
+valores = [8, 3, 6, 1, 4]
+indice = 0
+for i in range(1, len(valores)):
+ if valores[i] < valores[indice]:
+  indice=i
+print(valores[indice], "no índice", indice)

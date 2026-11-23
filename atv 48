@@ -1,0 +1,9 @@
+arvore = {"P1": ["P2", "P3"],
+ "P2": ["P4"], "P3": [], "P4": []}
+def remover_subarvore(no):
+ for filho in arvore.get(no, [])[:]:
+  remover_subarvore(filho)
+ arvore.pop(no, None)
+arvore["P1"].remove("P2")
+remover_subarvore("P2")
+print(arvore)
